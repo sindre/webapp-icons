@@ -21,26 +21,28 @@
 <link href="assets/content/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
 <link href="assets/content/apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="assets/content/apple-touch-startup-image-1496x2048.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image"-->
-<script>  	
+<script>		
 	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
 		document.querySelector("meta[name=viewport]").content="width=320.1"; 
 	}
 	(function (w, d){
 		var
 		nav = w.navigator,
+		gfxpath = '';
 		pixelRatio = w.devicePixelRatio === 2 ? '@2x' : '',
 		device = (/ipad/i).test(nav.platform) ? 'ipad' : (/iphone|ipod/i).test(nav.platform) ? 'iphone' : '',
 		orientation = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
 		if(device == 'iphone' && w.screen.height==568) {
 			device = 'iphone5';
+			d.querySelector("meta[name=viewport]").content="width=320.1"; 
 		}
-	if ( device === '' ) return;
-	if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
-		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-' + orientation + pixelRatio + '.png"' + ( device == 'ipad' ? ' media="screen and (orientation:' + orientation + ')"' : '' ) + '>');
-	} else {
-		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-landscape' + pixelRatio + '.png" media="screen and (orientation:landscape)">');
-		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-portrait' + pixelRatio + '.png" media="screen and (orientation:portrait)">');
-	}
+		if ( device === '' ) return;
+		if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
+			d.write('<link rel="apple-touch-startup-image" href="' + gfxpath + 'startup-' + device + '-' + orientation + pixelRatio + '.png"' + ( device == 'ipad' ? ' media="screen and (orientation:' + orientation + ')"' : '' ) + '>');
+		} else {
+			d.write('<link rel="apple-touch-startup-image" href="' + gfxpath + 'startup-' + device + '-landscape' + pixelRatio + '.png" media="screen and (orientation:landscape)">');
+			d.write('<link rel="apple-touch-startup-image" href="' + gfxpath + 'startup-' + device + '-portrait' + pixelRatio + '.png" media="screen and (orientation:portrait)">');
+		}
 	})(window, document);
 </script>
 </head>
