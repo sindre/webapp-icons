@@ -1,0 +1,75 @@
+<html lang="de" class="nojs" manifest='manifest.appcache'>
+<head><meta charset="utf-8">
+<title>Website Title</title>
+<meta name="apple-mobile-web-app-title" content="Webapp Title" />
+<meta name="author" content="Sindre Wimberger, www.sindre.at" />
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta http-equiv="cleartype" content="on">
+<meta name="viewport" content="width=device-width, init-scale=1, user-scalable=0">
+<link rel="shortcut icon" href="icon-iphone.png" />
+<link rel="apple-touch-icon" href="icon-iphone.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="icon-ipad-retina.png" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--link href="assets/content/iphone-portrait-320x460.png" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-640x1096.png" media="(device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+<link href="assets/content/apple-touch-startup-image-1496x2048.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image"-->
+<script>  	
+	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
+		document.querySelector("meta[name=viewport]").content="width=320.1"; 
+	}
+	(function (w, d){
+		var
+		nav = w.navigator,
+		pixelRatio = w.devicePixelRatio === 2 ? '@2x' : '',
+		device = (/ipad/i).test(nav.platform) ? 'ipad' : (/iphone|ipod/i).test(nav.platform) ? 'iphone' : '',
+		orientation = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
+		if(device == 'iphone' && w.screen.height==568) {
+			device = 'iphone5';
+		}
+	if ( device === '' ) return;
+	if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
+		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-' + orientation + pixelRatio + '.png"' + ( device == 'ipad' ? ' media="screen and (orientation:' + orientation + ')"' : '' ) + '>');
+	} else {
+		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-landscape' + pixelRatio + '.png" media="screen and (orientation:landscape)">');
+		d.write('<link rel="apple-touch-startup-image" href="startup-' + device + '-portrait' + pixelRatio + '.png" media="screen and (orientation:portrait)">');
+	}
+	})(window, document);
+</script>
+</head>
+<body>
+<!-- 
+http://cubiq.org/dropbox/startup-image.html 
+http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html
+http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers
+-->
+<h1>iOS Icon und Startscreen Tests</h1>
+<p>
+<script>		
+	(function (w, d){
+		var
+		nav = w.navigator,
+		pixelRatio = w.devicePixelRatio === 2 ? 'high-resolution' : '',
+		device = (/ipad/i).test(nav.platform) ? 'ipad' : (/iphone|ipod/i).test(nav.platform) ? 'iphone' : '',
+		orientation = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
+		if(device == 'iphone' && w.screen.height==568) {
+			device = 'iphone5';
+		}
+	if ( device === '' ) return;
+	if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
+		d.write(device + '-' + orientation + '-' + pixelRatio);
+	} else {
+		d.write(device + '-' + orientation + '-' + pixelRatio);
+	}
+	})(window, document);
+</script>
+</p>
+</body>
+</html>
