@@ -3,10 +3,9 @@ iOS-webapp
 
 iOS webapp testpage for icons and startupscreens
 
-Startupscreen Javascript
---------
-
-<script>		
+startupscreen Javascript
+--------  
+		
 	(function (w, d){
 		var
 		nav = w.navigator,
@@ -23,10 +22,9 @@ Startupscreen Javascript
 		d.write(device + '-' + orientation + '-' + pixelRatio);
 	}
 	})(window, document);
-</script>
 
-Links:
+resources
 --------
-http://cubiq.org/dropbox/startup-image.html 
-http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html
-http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers
+http://cubiq.org/dropbox/startup-image.html  
+http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html  
+http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers  
