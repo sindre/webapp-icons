@@ -3,6 +3,20 @@ iOS-webapp
 
 iOS webapp testpage for icons and startupscreens
 
+images sizes - pixel
+--------
+icon-iphone.png - 58x58  
+icon-iphone-retina.png - 114x114  
+icon-ipad.png - 72x72  
+icon-ipad-retina.png - 144x144  
+startup-iphone-portrait.png - 320x460  
+startup-iphone-portrait@2x.png - 640x920  
+startup-iphone5-portrait@2x.png - 640x1096  
+startup-ipad-portrait.png - 768x1004  
+startup-ipad-portrait@2x.png - 1536x2008  
+startup-ipad-landscape.png - 748x1024  
+startup-ipad-landscape@2x.png - 1496x2048  
+
 startupscreen Javascript
 --------  
 		
