@@ -3,7 +3,7 @@ iOS-webapp
 
 iOS webapp testpage for icons and startupscreens
 
-images sizes - pixel
+images sizes - pixel (device)
 --------
 icon-iphone.png - 58x58 (iPhone 3/3s / iPod Touch)  
 icon-iphone-retina.png - 114x114 (iPhone 4/4s/5 / iPod Touch)  
