@@ -1,7 +1,7 @@
 iOS-webapp
 ==========
 
-iOS webapp testpage for icons and startupscreens
+iOS webapp testpage for icons and startupscreens - <a href="http://sindre.at/ios-webapp/">Demo</a>
 
 images sizes - pixel (device)
 --------
