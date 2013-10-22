@@ -1,5 +1,7 @@
-Web App Icon und StartupScreen for iOS and Android
+Web App icons und startupscreens
 ==========
+
+Web App icons und startupscreens for iOS and Android
 
 Web App testpage for icons and startupscreens - <a href="http://sindre.at/lab/ios-webapp/">Demo</a>
 
@@ -21,26 +23,26 @@ startup-ipad-portrait@2x.png - 1536x2008 (retina iPad / iPad mini)
 startup-ipad-landscape.png - 748x1024 (non-retina iPad)  
 startup-ipad-landscape@2x.png - 1496x2048 (retina iPad / iPad mini)  
 
-Icon HTML Code (put into HEAD)
+icon HTML code (put into HEAD)
 --------  
-<!-- Web App Icon Android Chrome -->
-<link rel="shortcut icon" href="icon196.png" sizes="196x196" />
-<!-- non-retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon" href="icon58.png" sizes="58x58" />
-<!-- non-retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon" href="icon72.png" sizes="72x72" />
-<!-- non-retina iPad iOS 7 -->
-<link rel="apple-touch-icon" href="icon76.png" sizes="76x76" />
-<!-- retina iPhone pre iOS 7 -->
-<link rel="apple-touch-icon" href="icon114.png" sizes="114x114" />
-<!-- retina iPhone iOS 7 -->
-<link rel="apple-touch-icon" href="icon120.png" sizes="120x120" />
-<!-- retina iPad pre iOS 7 -->
-<link rel="apple-touch-icon" href="icon144.png" sizes="144x144" />
-<!-- retina iPad iOS 7 -->
-<link rel="apple-touch-icon" href="icon152.png" sizes="152x152" />
+	<!-- Web App Icon Android Chrome -->
+	<link rel="shortcut icon" href="icon196.png" sizes="196x196" />
+	<!-- non-retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon" href="icon58.png" sizes="58x58" />
+	<!-- non-retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon" href="icon72.png" sizes="72x72" />
+	<!-- non-retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="icon76.png" sizes="76x76" />
+	<!-- retina iPhone pre iOS 7 -->
+	<link rel="apple-touch-icon" href="icon114.png" sizes="114x114" />
+	<!-- retina iPhone iOS 7 -->
+	<link rel="apple-touch-icon" href="icon120.png" sizes="120x120" />
+	<!-- retina iPad pre iOS 7 -->
+	<link rel="apple-touch-icon" href="icon144.png" sizes="144x144" />
+	<!-- retina iPad iOS 7 -->
+	<link rel="apple-touch-icon" href="icon152.png" sizes="152x152" />
 
-iOS startupscreen Javascript
+iOS startupscreen javascript
 --------  
 	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
 		document.querySelector("meta[name=viewport]").content="width=320.1"; 
@@ -65,12 +67,12 @@ iOS startupscreen Javascript
 		}
 	})(window, document);
 
-Web App HTML Code (put into HEAD)
+Web App HTML code (put into HEAD)
 --------
-<!-- Web App Android Chrome -->
-<meta name="mobile-web-app-capable" content="yes" />
-<!-- Web App iOS -->
-<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- Web App Android Chrome -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<!-- Web App iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
 resources
 --------
