@@ -1,25 +1,47 @@
-iOS-webapp
+Web App Icon und StartupScreen for iOS and Android
 ==========
 
-iOS webapp testpage for icons and startupscreens - <a href="http://sindre.at/ios-webapp/">Demo</a>
+Web App testpage for icons and startupscreens - <a href="http://sindre.at/lab/ios-webapp/">Demo</a>
 
-images sizes - pixel (device)
+icon sizes - pixel (device)
 --------
-icon-iphone.png - 58x58 (iPhone 3/3s / iPod Touch)  
-icon-iphone-retina.png - 114x114 (iPhone 4/4s/5 / iPod Touch)  
-icon-ipad.png - 72x72 (iPad / iPad 2)  
-icon-ipad-retina.png - 144x144 (iPad 3 / ipad mini)  
-startup-iphone-portrait.png - 320x460 (iPhone 3Gs / iPod Touch)  
-startup-iphone-portrait@2x.png - 640x920 (iPhone 4/4s / iPod Touch)  
-startup-iphone5-portrait@2x.png - 640x1096  (iPhone 5 / iPod Touch)  
-startup-ipad-portrait.png - 768x1004 (iPad / iPad 2)  
-startup-ipad-portrait@2x.png - 1536x2008 (iPad 3 / ipad mini)  
-startup-ipad-landscape.png - 748x1024 (iPad / iPad 2)  
-startup-ipad-landscape@2x.png - 1496x2048 (iPad 3 / ipad mini)  
+icon196.png - 196x196 (Web App Icon Android Chrome)
+icon58.png - 58x58 (non-retina iPhone pre iOS 7) 
+icon72.png - 72x72 (non-retina iPad pre iOS 7)  
+icon76.png - 76x76 (non-retina iPad iOS 7)   
+icon114.png - 114x114 (retina iPhone pre iOS 7)  
+icon120.png - 120x120 (retina iPhone iOS 7) 
+icon144.png - 144x144 (retina iPad pre iOS 7)  
+icon152.png - 152x152 (retina iPad iOS 7)  
+startup-iphone-portrait.png - 320x460 (non-retina iPhone)  
+startup-iphone-portrait@2x.png - 640x920 (retina iPhone)  
+startup-iphone5-portrait@2x.png - 640x1096  (retina iPhone5+)  
+startup-ipad-portrait.png - 768x1004 (non-retina iPad)  
+startup-ipad-portrait@2x.png - 1536x2008 (retina iPad / iPad mini)  
+startup-ipad-landscape.png - 748x1024 (non-retina iPad)  
+startup-ipad-landscape@2x.png - 1496x2048 (retina iPad / iPad mini)  
 
-startupscreen Javascript
+Icon HTML Code (put into HEAD)
 --------  
-		
+<!-- Web App Icon Android Chrome -->
+<link rel="shortcut icon" href="icon196.png" sizes="196x196" />
+<!-- non-retina iPhone pre iOS 7 -->
+<link rel="apple-touch-icon" href="icon58.png" sizes="58x58" />
+<!-- non-retina iPad pre iOS 7 -->
+<link rel="apple-touch-icon" href="icon72.png" sizes="72x72" />
+<!-- non-retina iPad iOS 7 -->
+<link rel="apple-touch-icon" href="icon76.png" sizes="76x76" />
+<!-- retina iPhone pre iOS 7 -->
+<link rel="apple-touch-icon" href="icon114.png" sizes="114x114" />
+<!-- retina iPhone iOS 7 -->
+<link rel="apple-touch-icon" href="icon120.png" sizes="120x120" />
+<!-- retina iPad pre iOS 7 -->
+<link rel="apple-touch-icon" href="icon144.png" sizes="144x144" />
+<!-- retina iPad iOS 7 -->
+<link rel="apple-touch-icon" href="icon152.png" sizes="152x152" />
+
+iOS startupscreen Javascript
+--------  
 	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
 		document.querySelector("meta[name=viewport]").content="width=320.1"; 
 	}
@@ -43,8 +65,17 @@ startupscreen Javascript
 		}
 	})(window, document);
 
+Web App HTML Code (put into HEAD)
+--------
+<!-- Web App Android Chrome -->
+<meta name="mobile-web-app-capable" content="yes" />
+<!-- Web App iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
 resources
 --------
 http://cubiq.org/dropbox/startup-image.html  
 http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/mobilehig/IconsImages/IconsImages.html  
 http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers  
+http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review
+http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31
