@@ -74,6 +74,11 @@ Web App HTML code (put into HEAD)
 	<!-- Web App iOS -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
+one icon for all sizes
+--------
+Using only one Apple Touch Icon saves time and is enough in some cases. 
+https://github.com/h5bp/html5-boilerplate/commit/71ca9fb7a06bfcd2359c924ca261d41d1dd03e8d
+
 resources
 --------
 http://cubiq.org/dropbox/startup-image.html  
@@ -81,3 +86,5 @@ http://developer.apple.com/library/ios/#documentation/userexperience/conceptual/
 http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers  
 http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review
 http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31
+https://github.com/h5bp/html5-boilerplate/commit/71ca9fb7a06bfcd2359c924ca261d41d1dd03e8d
+https://npmjs.org/package/grunt-favicons
