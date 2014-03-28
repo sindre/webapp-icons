@@ -37,9 +37,6 @@
 <link href="assets/content/apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 <link href="assets/content/apple-touch-startup-image-1496x2048.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)" rel="apple-touch-startup-image"-->
 <script>		
-	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
-		document.querySelector("meta[name=viewport]").content="width=320.1"; 
-	}
 	(function (w, d){
 		var
 		nav = w.navigator,
@@ -49,7 +46,7 @@
 		orient = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
 		if(device == 'iphone' && w.screen.height==568) {
 			device = 'iphone5';
-			d.querySelector("meta[name=viewport]").content="width=320.1"; 
+			d.querySelector("meta[name=viewport]").content="width=320.1"; // iPhone 4" Webapp Fullsize
 		}
 		if ( device === '' ) return;
 		if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
