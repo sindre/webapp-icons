@@ -46,7 +46,6 @@
 		orient = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
 		if(device == 'iphone' && w.screen.height==568) {
 			device = 'iphone5';
-			d.querySelector("meta[name=viewport]").content="width=320.1"; // iPhone 4" Webapp Fullsize
 		}
 		if ( device === '' ) return;
 		if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
