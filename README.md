@@ -44,9 +44,6 @@ icon HTML code (put into HEAD)
 
 iOS startupscreen javascript
 --------  
-	if (window.screen.height==568) { // iPhone 4" Webapp Fullsize
-		document.querySelector("meta[name=viewport]").content="width=320.1"; 
-	}
 	(function (w, d){
 		var
 		nav = w.navigator,
@@ -56,7 +53,7 @@ iOS startupscreen javascript
 		orient = device == 'ipad' && w.orientation % 180 ? 'landscape' : 'portrait';
 		if(device == 'iphone' && w.screen.height==568) {
 			device = 'iphone5';
-			d.querySelector("meta[name=viewport]").content="width=320.1"; 
+			d.querySelector("meta[name=viewport]").content="width=320.1"; // iPhone 4" Webapp Fullsize
 		}
 		if ( device === '' ) return;
 		if ( device == 'iphone' || device == 'iphone5' || nav.standalone ) {
@@ -87,4 +84,5 @@ http://www.mobilexweb.com/blog/iphone-5-ios-6-html5-developers
 http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review   
 http://www.mobilexweb.com/blog/home-screen-web-apps-android-chrome-31   
 https://github.com/h5bp/html5-boilerplate/commit/71ca9fb7a06bfcd2359c924ca261d41d1dd03e8d   
+https://gist.github.com/tfausak/2222823  
 https://npmjs.org/package/grunt-favicons
